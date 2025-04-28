@@ -30,15 +30,15 @@ jobs:
         run: npm install -g newman
 
       # **Red**: Corrected indentation for the following lines
-      - name: Run Collection 1 with Environment 1
+      - name: Run Product API's Collection with Dev Environment
         run: |
-          newman run postman/Collection1.json \
-            -e postman/Environment1.json
+          newman run postman/Billorbit Product API.postman_collection.json \
+            -e postman/Billorbit Dev API Testing Environment.postman_environment.json
 
-      - name: Run Collection 2 with Environment 2
+      - name: Run Billing API's Collection with Dev Environment
         run: |
-          newman run postman/Collection2.json \
-            -e postman/Environment2.json
+          newman run postman/Billorbit Billing API.postman_collection.json \
+            -e postman/Billorbit Dev API Testing Environment.postman_environment.json
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
