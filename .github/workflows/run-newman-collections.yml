@@ -29,12 +29,13 @@ jobs:
       - name: Install Newman
         run: npm install -g newman
 
-      # **Red**: Corrected indentation for the following lines
+      # Run Product API's Test Cases
       - name: Run Product API's Collection with Dev Environment
         run: |
           newman run postman/Billorbit Product API.postman_collection.json \
             -e postman/Billorbit Dev API Testing Environment.postman_environment.json
 
+      # Run Billing API's Test Cases
       - name: Run Billing API's Collection with Dev Environment
         run: |
           newman run postman/Billorbit Billing API.postman_collection.json \
